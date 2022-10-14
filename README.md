@@ -1,5 +1,5 @@
 # N-Queens Problem
-The above Problem is solved in methods of optimization, including:
+The above problem is solved in methods of optimization, including:
 1. local search
     1. hill climbing
     2. first-choice hill climbing
