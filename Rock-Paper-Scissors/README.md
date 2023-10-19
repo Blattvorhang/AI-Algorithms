@@ -1,11 +1,11 @@
-下文分别以 $x$ 和 $y$ 表示player1和player2的混合策略，以 $x^{*}$ 和 $y^{*}$ 表示局中人1和2的混策略纳什均衡。
+下文分别以 $x$ 和 $y$ 表示player1和player2的混合策略，以 $x^*$ 和 $y^*$ 表示局中人1和2的混策略纳什均衡。
 
 在二人有限零和博弈中，设player1有 $m$ 个纯策略 $\alpha_1, \alpha_2, \cdots， \alpha_m$ ，player2有 $n$ 个纯策略 $\beta_1, \beta_2, \cdots, \beta_n$ 。当player1选定纯策略 $\alpha_i$ 和player2选定纯策略 $\beta_j$ 后，就形成了一个纯策略组合 $(\alpha_i, \beta_j)$ ，可见这样的纯策略组合共有 $m\times n$ 个。对任一纯策略组合 $(\alpha_i, \beta_j)$ ，记player1的收益值为 $a_{i j}$ ，称 $\mathbf{A}=(a_{i j})$ 为player1的收益矩阵。由于对策为零和的，故player2的收益矩阵为 $-\mathbf{A}$ 。在此意义下，二人有限零和博弈可被表示为**矩阵博弈**，这也是下文讨论对偶线性规划的基础，该算法仅可针对二人有限零和博弈给出求解。
 
 在正式引入对偶线性规划法前，先介绍下面两个定理。
 
 ### 定理 1
-二人零和博弈 $G=\left \{\left \{ 1,2 \right \} \left \{ S_1,S_2 \right \} \left \{ u_1,u_2 \right \} \right \}$ 在混合策略意义下有解的充要条件是：存在 $x^* \in S_1, y^* \in S_2$ ，使得对任意 $x \in S_1$和$y \in S_2$，有
+二人零和博弈 $G=\{ \{ 1,2 \} \{ S_1,S_2 \} \{ u_1,u_2 \} \}$ 在混合策略意义下有解的充要条件是：存在 $x^* \in S_1, y^* \in S_2$ ，使得对任意 $x \in S_1$和$y \in S_2$，有
 $$E(x,y^*) \le E(x^*,y^*) \le E(x^*,y)$$
 这里， $E(x, y) = x^\top \mathbf{A} y = \sum_i \sum_j a_{i j} x_i y_j$ ，表示混合策略意义下的收益函数（期望）。这里 $(x^*,y^*)$ 就是对应的均衡混合策略组合。
 
